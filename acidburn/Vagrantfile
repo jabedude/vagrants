@@ -7,4 +7,5 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision "shell", inline: <<-SHELL
     hostnamectl set-hostname acidburn
+  SHELL
 end
