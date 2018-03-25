@@ -18,6 +18,9 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision "shell", inline: <<-SHELL
     hostnamectl set-hostname appetizertraining
+    apt update
+    apt install -y build-essential git tmux vim wget
+    wget https://goo.gl/rr3SFv -O /home/vagrant/.vimrc
   SHELL
 
   # Disable automatic box update checking. If you disable this, then
